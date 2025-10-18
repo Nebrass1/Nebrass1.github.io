@@ -23,9 +23,9 @@ title: Accueil
 
 | Domaine | Compétences Clés |
 | :--- | :--- |
-| **IA & LLMs** | **LangChain**, **Ollama**, **FAISS**, Transfer Learning, NLP, MLOps (léger)|
-| **Business Intelligence** | **Power BI**, Tableau, **Talend (ETL)**, PostgreSQL, Data Warehouse, SQL|
-| **Outils/Tech** | Python, Streamlit, Gradio, Git, Scikit-learn, Django|
+| **IA & LLMs** | **LangChain**, **Ollama**, **FAISS**, Transfer Learning, NLP, MLOps (léger) |
+| **Business Intelligence** | **Power BI**, Tableau, **Talend (ETL)**, PostgreSQL, Data Warehouse, SQL |
+| **Outils/Tech** | Python, Streamlit, Gradio, Git, Scikit-learn, Django |
 
 ---
 
