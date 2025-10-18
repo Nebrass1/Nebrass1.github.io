@@ -1,4 +1,29 @@
-title: Nebrass Chamakh | Portfolio IA & BI
+# Configuration Principale du Site Jekyll
+
+# --- Infos de base et SEO ---
+title: Nebrass Chamakh | Ingénieure IA & Data Science
 email: chamakhnebrass@gmail.com
-description: Portfolio Data Science, LLMs et Business Intelligence. # (Correction de l'accentuation)
-theme: minima
+description: >-
+  Portfolio de Nebrass Chamakh, étudiante en dernière année d'Ingénierie Informatique. 
+  Spécialisation en Data Science, LLMs (LangChain, Ollama) et Business Intelligence (Power BI, Talend). 
+  Recherche Stage PFE.
+
+# --- Paramètres de Publication ---
+baseurl: "" # Laissez vide pour la publication sur votre nom de domaine GitHub Pages
+url: "https://nebrass1.github.io" 
+theme: minima # Thème Jekyll simple par défaut. Vous pouvez le changer plus tard.
+
+# --- Liens Sociaux et Contacts ---
+github_username: Nebrass1
+linkedin_username: nebrass-shemakh-470ba7214
+mobile_phone: +21629436361 # Ajouté pour faciliter le contact
+
+# --- Paramètres Jekyll (Ne pas modifier sauf si vous savez ce que vous faites) ---
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+exclude: 
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
