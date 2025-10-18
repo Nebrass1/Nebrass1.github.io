@@ -1,21 +1,21 @@
 # Configuration Principale du Site Jekyll
 
 # --- Infos de base et SEO (Amélioré) ---
-title: Nebrass Chamakh | Ingénieure IA & Data Science
+title: Nebrass Chamakh | Portfolio IA/BI # Titre court pour la barre de navigation
 email: chamakhnebrass@gmail.com
 description: >-
   Portfolio de Nebrass Chamakh, étudiante en dernière année d'Ingénierie Informatique. 
   Spécialisation en Data Science, LLMs (LangChain, Ollama) et Business Intelligence (Power BI, Talend). 
-  Recherche Stage PFE en IA Générative. # Plus spécifique
+  Recherche Stage PFE en IA Générative. 
 url: "https://nebrass1.github.io" 
 baseurl: ""
-timezone: Africa/Tunis # Ajouté : Bonne pratique pour la localisation
+timezone: Africa/Tunis
 
 # --- Thème et Plugins ---
 theme: minima 
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag # Ajouté : Essentiel pour le SEO
+  - jekyll-seo-tag # Essentiel pour le SEO
 
 # --- Liens Sociaux et Contacts ---
 github_username: Nebrass1
