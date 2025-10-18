@@ -1,24 +1,28 @@
 # Configuration Principale du Site Jekyll
 
-# --- Infos de base et SEO ---
+# --- Infos de base et SEO (Amélioré) ---
 title: Nebrass Chamakh | Ingénieure IA & Data Science
 email: chamakhnebrass@gmail.com
 description: >-
   Portfolio de Nebrass Chamakh, étudiante en dernière année d'Ingénierie Informatique. 
   Spécialisation en Data Science, LLMs (LangChain, Ollama) et Business Intelligence (Power BI, Talend). 
-  Recherche Stage PFE.
-
-# --- Paramètres de Publication ---
-baseurl: "" # Laissez vide pour la publication sur votre nom de domaine GitHub Pages
+  Recherche Stage PFE en IA Générative. # Plus spécifique
 url: "https://nebrass1.github.io" 
-theme: minima # Thème Jekyll simple par défaut. Vous pouvez le changer plus tard.
+baseurl: ""
+timezone: Africa/Tunis # Ajouté : Bonne pratique pour la localisation
+
+# --- Thème et Plugins ---
+theme: minima 
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag # Ajouté : Essentiel pour le SEO
 
 # --- Liens Sociaux et Contacts ---
 github_username: Nebrass1
 linkedin_username: nebrass-shemakh-470ba7214
-mobile_phone: +21629436361 # Ajouté pour faciliter le contact
+mobile_phone: +21629436361 
 
-# --- Paramètres Jekyll (Ne pas modifier sauf si vous savez ce que vous faites) ---
+# --- Paramètres Jekyll ---
 markdown: kramdown
 highlighter: rouge
 permalink: /:title/
