@@ -66,6 +66,13 @@ nav{
 .nav-links{display:flex;gap:1.4rem;list-style:none;font-size:.9rem}
 .nav-links a{text-decoration:none;color:var(--muted);font-weight:500}
 .nav-links a:hover,.nav-links a:focus-visible{color:var(--navy)}
+.lang-btn{
+  font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.12em;
+  padding:.4rem .85rem;border-radius:999px;border:1px solid var(--line);
+  background:var(--card);color:var(--navy);font-weight:600;cursor:pointer;
+  transition:all .15s ease;
+}
+.lang-btn:hover,.lang-btn:focus-visible{border-color:var(--gold);color:var(--gold)}
 @media(max-width:700px){.nav-links{display:none}}
 
 /* ---------- hero ---------- */
@@ -210,12 +217,13 @@ footer{background:var(--navy);color:#C6CCEC;margin-top:4.5rem}
   <div class="nav-in">
     <a class="brand" href="#top">Nebrass<em>.</em>Chamakh</a>
     <ul class="nav-links">
-      <li><a href="#work">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
+      <li><a href="#work" data-i18n="nav.projects">Projects</a></li>
+      <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+      <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
       <li><a href="#leadership">Leadership</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button class="lang-btn" id="lang-toggle" type="button" aria-label="Switch language / Changer de langue">FR</button>
   </div>
 </nav>
 
@@ -223,23 +231,23 @@ footer{background:var(--navy);color:#C6CCEC;margin-top:4.5rem}
 <header class="hero" id="top">
   <div class="hero-in">
     <div>
-      <p class="eyebrow">AI Engineer · Tunis, Tunisia</p>
-      <h1>I build AI systems that <span class="accent">explore, learn</span> — and ship.</h1>
-      <p class="lede">
+      <p class="eyebrow" data-i18n="hero.eyebrow">AI Engineer · Tunis, Tunisia</p>
+      <h1 data-i18n="hero.title">I build AI systems that <span class="accent">explore, learn</span> — and ship.</h1>
+      <p class="lede" data-i18n="hero.lede">
         Computer engineering graduate (2026). For my final-year thesis I designed an autonomous,
         Reinforcement Learning–driven test platform for a core banking system — deployed in
         production with Docker. I like intelligent software that is measurable, governed and real.
       </p>
       <div class="hero-cta">
-        <a class="btn btn-gold" href="#work">See my work</a>
-        <a class="btn btn-ghost" href="mailto:chamakhnebrass@gmail.com">Email me</a>
+        <a class="btn btn-gold" href="#work" data-i18n="hero.cta.work">See my work</a>
+        <a class="btn btn-ghost" href="mailto:chamakhnebrass@gmail.com" data-i18n="hero.cta.email">Email me</a>
         <a class="btn btn-ghost" href="https://github.com/Nebrass1" target="_blank" rel="noopener">GitHub</a>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/nebrass-shemakh-470ba7214/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
       <div class="hero-stats">
-        <div class="stat"><b>&lt; 4 h</b><span>regression cycle (was weeks)</span></div>
-        <div class="stat"><b>200+</b><span>automated scenarios</span></div>
-        <div class="stat"><b>4</b><span>internships → production</span></div>
+        <div class="stat"><b>&lt; 4 h</b><span data-i18n="hero.stat1">regression cycle (was weeks)</span></div>
+        <div class="stat"><b>200+</b><span data-i18n="hero.stat2">automated scenarios</span></div>
+        <div class="stat"><b>4</b><span data-i18n="hero.stat3">internships → production</span></div>
       </div>
     </div>
     <div class="trace-wrap" aria-hidden="true">
@@ -252,34 +260,34 @@ footer{background:var(--navy);color:#C6CCEC;margin-top:4.5rem}
 <!-- ================= FEATURED ================= -->
 <section id="featured">
   <div class="sec-head reveal">
-    <p class="eyebrow">Featured · Final-Year Thesis (PFE)</p>
-    <h2>TestingFactory V2 — AI-driven test automation</h2>
+    <p class="eyebrow" data-i18n="feat.eyebrow">Featured · Final-Year Thesis (PFE)</p>
+    <h2 data-i18n="feat.h2">TestingFactory V2 — AI-driven test automation</h2>
   </div>
   <div class="featured reveal">
     <div>
-      <p class="eyebrow" style="margin-bottom:.4rem">Accompany Consulting · Jan – Jun 2026</p>
-      <h3>An autonomous agent that tests a core banking system</h3>
-      <p>End-to-end platform unifying deterministic Selenium automation with autonomous
+      <p class="eyebrow" style="margin-bottom:.4rem" data-i18n="feat.dates">Accompany Consulting · Jan – Jun 2026</p>
+      <h3 data-i18n="feat.h3">An autonomous agent that tests a core banking system</h3>
+      <p data-i18n="feat.p">End-to-end platform unifying deterministic Selenium automation with autonomous
          Reinforcement Learning exploration — turning a manual, multi-week testing process
          into a governed, self-improving pipeline.</p>
       <ul class="feat-points">
-        <li>PPO agent (Stable-Baselines3, Gymnasium) navigating a complex enterprise UI with no prior scripting — 128-dimensional page observations, reward tuned for defect discovery.</li>
-        <li>Multi-layer <b>SafetyGuard</b> blocking unsafe actions in real time, with a complete audit trail for a regulated banking environment.</li>
-        <li>Self-improving loop: best-model tracking, entropy scheduling, action-correction memory, analytics dashboards for model promotion.</li>
-        <li>RBAC Django governance portal; containerized deployment with Docker, Nginx &amp; Gunicorn.</li>
-        <li><b>Impact:</b> autonomous discovery of previously unknown, out-of-catalog defects + automatic generation of reusable test scenarios.</li>
+        <li data-i18n="feat.li1">PPO agent (Stable-Baselines3, Gymnasium) navigating a complex enterprise UI with no prior scripting — 128-dimensional page observations, reward tuned for defect discovery.</li>
+        <li data-i18n="feat.li2">Multi-layer <b>SafetyGuard</b> blocking unsafe actions in real time, with a complete audit trail for a regulated banking environment.</li>
+        <li data-i18n="feat.li3">Self-improving loop: best-model tracking, entropy scheduling, action-correction memory, analytics dashboards for model promotion.</li>
+        <li data-i18n="feat.li4">RBAC Django governance portal; containerized deployment with Docker, Nginx &amp; Gunicorn.</li>
+        <li data-i18n="feat.li5"><b>Impact:</b> autonomous discovery of previously unknown, out-of-catalog defects + automatic generation of reusable test scenarios.</li>
       </ul>
       <p class="stack" style="margin-top:1rem;font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--navy-2)">
         Python · Django · PostgreSQL · Selenium · Stable-Baselines3 · Gymnasium · PPO · Docker · Nginx · Gunicorn
       </p>
     </div>
     <div class="feat-metrics">
-      <div class="metric"><b>&lt; 4 h</b><span>full regression, from weeks</span></div>
-      <div class="metric"><b>200+</b><span>functional scenarios</span></div>
-      <div class="metric"><b>7</b><span>business modules covered</span></div>
-      <div class="metric"><b>128-D</b><span>observation vector / page</span></div>
-      <div class="metric"><b>100%</b><span>actions audited (SafetyGuard)</span></div>
-      <div class="metric"><b>∞</b><span>improves with every run</span></div>
+      <div class="metric"><b>&lt; 4 h</b><span data-i18n="feat.m1">full regression, from weeks</span></div>
+      <div class="metric"><b>200+</b><span data-i18n="feat.m2">functional scenarios</span></div>
+      <div class="metric"><b>7</b><span data-i18n="feat.m3">business modules covered</span></div>
+      <div class="metric"><b>128-D</b><span data-i18n="feat.m4">observation vector / page</span></div>
+      <div class="metric"><b>100%</b><span data-i18n="feat.m5">actions audited (SafetyGuard)</span></div>
+      <div class="metric"><b>∞</b><span data-i18n="feat.m6">improves with every run</span></div>
     </div>
   </div>
 </section>
@@ -287,8 +295,8 @@ footer{background:var(--navy);color:#C6CCEC;margin-top:4.5rem}
 <!-- ================= PROJECTS (auto-rendered) ================= -->
 <section id="work">
   <div class="sec-head reveal">
-    <p class="eyebrow">Selected work</p>
-    <h2>Projects</h2>
+    <p class="eyebrow" data-i18n="work.eyebrow">Selected work</p>
+    <h2 data-i18n="work.h2">Projects</h2>
   </div>
   <div class="tagbar reveal" id="tagbar"></div>
   <div class="grid" id="projects-grid"></div>
@@ -297,39 +305,39 @@ footer{background:var(--navy);color:#C6CCEC;margin-top:4.5rem}
 <!-- ================= EXPERIENCE ================= -->
 <section id="experience">
   <div class="sec-head reveal">
-    <p class="eyebrow">Track record</p>
-    <h2>Experience</h2>
+    <p class="eyebrow" data-i18n="exp.eyebrow">Track record</p>
+    <h2 data-i18n="exp.h2">Experience</h2>
   </div>
   <div class="timeline">
     <div class="t-item reveal">
-      <span class="when">Jan 2026 – Jun 2026</span>
-      <h3>AI Engineer — Final-Year Internship</h3>
+      <span class="when" data-i18n="exp.t1.when">Jan 2026 – Jun 2026</span>
+      <h3 data-i18n="exp.t1.h3">AI Engineer — Final-Year Internship</h3>
       <span class="org">Accompany Consulting</span>
-      <p>Designed &amp; deployed TestingFactory V2, an RL-driven autonomous test platform for a large-scale core banking system (see featured project above).</p>
+      <p data-i18n="exp.t1.p">Designed &amp; deployed TestingFactory V2, an RL-driven autonomous test platform for a large-scale core banking system (see featured project above).</p>
     </div>
     <div class="t-item reveal">
-      <span class="when">Jul 2025 – Sep 2025</span>
-      <h3>AI Engineering Intern</h3>
+      <span class="when" data-i18n="exp.t2.when">Jul 2025 – Sep 2025</span>
+      <h3 data-i18n="exp.t2.h3">AI Engineering Intern</h3>
       <span class="org">Expertises SARL</span>
-      <p>Built a secure RAG conversational agent for Arabic legal documents — OCR, anonymization, FAISS vector indexing with LangChain &amp; Ollama. Improved data access efficiency by 30%.</p>
+      <p data-i18n="exp.t2.p">Built a secure RAG conversational agent for Arabic legal documents — OCR, anonymization, FAISS vector indexing with LangChain &amp; Ollama. Improved data access efficiency by 30%.</p>
     </div>
     <div class="t-item reveal">
-      <span class="when">Jun 2024 – Jul 2024</span>
-      <h3>Business Intelligence Intern</h3>
+      <span class="when" data-i18n="exp.t3.when">Jun 2024 – Jul 2024</span>
+      <h3 data-i18n="exp.t3.h3">Business Intelligence Intern</h3>
       <span class="org">Poulina Group Holding</span>
-      <p>Stock-movement tracking system (Power BI, Talend, PostgreSQL) improving logistics decision-making by 15%.</p>
+      <p data-i18n="exp.t3.p">Stock-movement tracking system (Power BI, Talend, PostgreSQL) improving logistics decision-making by 15%.</p>
     </div>
     <div class="t-item reveal">
-      <span class="when">Feb 2023 – Jun 2023</span>
-      <h3>Business Intelligence Intern — Bachelor's Thesis</h3>
+      <span class="when" data-i18n="exp.t4.when">Feb 2023 – Jun 2023</span>
+      <h3 data-i18n="exp.t4.h3">Business Intelligence Intern — Bachelor's Thesis</h3>
       <span class="org">BIAT — Banque Internationale Arabe de Tunisie</span>
-      <p>Data Warehouse (PostgreSQL) + ETL pipeline (Talend) for monetary-flow tracking; Power BI KPIs deployed to production with Scrum.</p>
+      <p data-i18n="exp.t4.p">Data Warehouse (PostgreSQL) + ETL pipeline (Talend) for monetary-flow tracking; Power BI KPIs deployed to production with Scrum.</p>
     </div>
     <div class="t-item reveal">
-      <span class="when">Sep 2022 – Present</span>
-      <h3>Freelance Consultant — BI &amp; Training</h3>
-      <span class="org">Independent</span>
-      <p>Power BI dashboards, Data Warehouse modeling, ETL pipelines (Talend), Python data cleaning — plus graphic-design training (Photoshop, Illustrator).</p>
+      <span class="when" data-i18n="exp.t5.when">Sep 2022 – Present</span>
+      <h3 data-i18n="exp.t5.h3">Freelance Consultant — BI &amp; Training</h3>
+      <span class="org" data-i18n="exp.t5.org">Independent</span>
+      <p data-i18n="exp.t5.p">Power BI dashboards, Data Warehouse modeling, ETL pipelines (Talend), Python data cleaning — plus graphic-design training (Photoshop, Illustrator).</p>
     </div>
   </div>
 </section>
@@ -337,17 +345,17 @@ footer{background:var(--navy);color:#C6CCEC;margin-top:4.5rem}
 <!-- ================= SKILLS ================= -->
 <section id="skills">
   <div class="sec-head reveal">
-    <p class="eyebrow">Toolbox</p>
-    <h2>Skills</h2>
+    <p class="eyebrow" data-i18n="sk.eyebrow">Toolbox</p>
+    <h2 data-i18n="sk.h2">Skills</h2>
   </div>
   <div class="skills">
-    <div class="skill-group reveal"><h3>AI / Machine Learning</h3><div class="chips">
-      <span class="chip">Reinforcement Learning (PPO)</span><span class="chip">Stable-Baselines3</span><span class="chip">Gymnasium</span><span class="chip">Scikit-learn</span><span class="chip">Keras</span><span class="chip">Transfer Learning</span><span class="chip">NLP</span><span class="chip">OCR / Tesseract</span><span class="chip">Librosa</span>
+    <div class="skill-group reveal"><h3 data-i18n="sk.g1">AI / Machine Learning</h3><div class="chips">
+      <span class="chip" data-i18n="chip.rl">Reinforcement Learning (PPO)</span><span class="chip">Stable-Baselines3</span><span class="chip">Gymnasium</span><span class="chip">Scikit-learn</span><span class="chip">Keras</span><span class="chip">Transfer Learning</span><span class="chip">NLP</span><span class="chip">OCR / Tesseract</span><span class="chip">Librosa</span>
     </div></div>
     <div class="skill-group reveal"><h3>LLMs &amp; RAG</h3><div class="chips">
-      <span class="chip">LangChain</span><span class="chip">Ollama</span><span class="chip">FAISS</span><span class="chip">Prompt design</span>
+      <span class="chip">LangChain</span><span class="chip">Ollama</span><span class="chip">FAISS</span><span class="chip" data-i18n="chip.prompt">Prompt design</span>
     </div></div>
-    <div class="skill-group reveal"><h3>MLOps &amp; Deployment</h3><div class="chips">
+    <div class="skill-group reveal"><h3 data-i18n="sk.g3">MLOps &amp; Deployment</h3><div class="chips">
       <span class="chip">Docker</span><span class="chip">Nginx</span><span class="chip">Gunicorn</span><span class="chip">Git / Git LFS</span><span class="chip">Hugging Face Spaces</span><span class="chip">Gradio</span><span class="chip">Streamlit</span>
     </div></div>
     <div class="skill-group reveal"><h3>Data &amp; BI</h3><div class="chips">
@@ -356,8 +364,8 @@ footer{background:var(--navy);color:#C6CCEC;margin-top:4.5rem}
     <div class="skill-group reveal"><h3>Web</h3><div class="chips">
       <span class="chip">Django (REST, RBAC)</span><span class="chip">Selenium</span><span class="chip">Bootstrap 5</span>
     </div></div>
-    <div class="skill-group reveal"><h3>Ways of working</h3><div class="chips">
-      <span class="chip">Scrum / Agile</span><span class="chip">Technical communication</span><span class="chip">FR · EN · AR</span>
+    <div class="skill-group reveal"><h3 data-i18n="sk.g6">Ways of working</h3><div class="chips">
+      <span class="chip">Scrum / Agile</span><span class="chip" data-i18n="chip.comm">Technical communication</span><span class="chip">FR · EN · AR</span>
     </div></div>
   </div>
 </section>
@@ -365,19 +373,19 @@ footer{background:var(--navy);color:#C6CCEC;margin-top:4.5rem}
 <!-- ================= LEADERSHIP ================= -->
 <section id="leadership">
   <div class="sec-head reveal">
-    <p class="eyebrow">Beyond the code</p>
+    <p class="eyebrow" data-i18n="lead.eyebrow">Beyond the code</p>
     <h2>Leadership</h2>
   </div>
   <div class="lead-grid">
     <div class="lead-card reveal">
-      <p class="eyebrow">ISIMa · Scientific Council</p>
-      <h3>Student Representative</h3>
-      <p>Led communication between the administration and 1,100+ students — advocacy, escalation and follow-through.</p>
+      <p class="eyebrow" data-i18n="lead.c1.eyebrow">ISIMa · Scientific Council</p>
+      <h3 data-i18n="lead.c1.h3">Student Representative</h3>
+      <p data-i18n="lead.c1.p">Led communication between the administration and 1,100+ students — advocacy, escalation and follow-through.</p>
     </div>
     <div class="lead-card reveal">
-      <p class="eyebrow">ISIMa · DevOps Club</p>
-      <h3>Club President</h3>
-      <p>Led a 100-member team and organized 10+ technical events around DevOps culture and tooling.</p>
+      <p class="eyebrow" data-i18n="lead.c2.eyebrow">ISIMa · DevOps Club</p>
+      <h3 data-i18n="lead.c2.h3">Club President</h3>
+      <p data-i18n="lead.c2.p">Led a 100-member team and organized 10+ technical events around DevOps culture and tooling.</p>
     </div>
   </div>
 </section>
@@ -385,16 +393,16 @@ footer{background:var(--navy);color:#C6CCEC;margin-top:4.5rem}
 <!-- ================= CONTACT ================= -->
 <footer id="contact">
   <div class="foot-in">
-    <p class="eyebrow">Open to AI / ML Engineer roles</p>
-    <h2>Let's build something intelligent.</h2>
-    <p>Based in Tunis · available immediately · open to remote &amp; international opportunities.</p>
+    <p class="eyebrow" data-i18n="foot.eyebrow">Open to AI / ML Engineer roles</p>
+    <h2 data-i18n="foot.h2">Let's build something intelligent.</h2>
+    <p data-i18n="foot.p">Based in Tunis · available immediately · open to remote &amp; international opportunities.</p>
     <div class="foot-links">
       <a class="btn btn-gold" href="mailto:chamakhnebrass@gmail.com">chamakhnebrass@gmail.com</a>
       <a class="btn btn-ghost" href="https://github.com/Nebrass1" target="_blank" rel="noopener">GitHub</a>
       <a class="btn btn-ghost" href="https://www.linkedin.com/in/nebrass-shemakh-470ba7214/" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn btn-ghost" href="tel:+21629436361">+216 29 436 361</a>
     </div>
-    <p class="foot-small">© 2026 Nebrass Chamakh — designed &amp; built by me · // status: seeking_first_role = true</p>
+    <p class="foot-small" data-i18n="foot.small">© 2026 Nebrass Chamakh — designed &amp; built by me · // status: seeking_first_role = true</p>
   </div>
 </footer>
 
@@ -403,9 +411,9 @@ footer{background:var(--navy);color:#C6CCEC;margin-top:4.5rem}
    PROJECTS — ADD YOUR NEW PROJECTS HERE ⬇
    Copy one block { ... }, paste it at the top of the list, edit, save.
    Fields:
-     title   : project name
+     title   : {en, fr} project name in both languages
      tags    : pick from FILTERS below (one or several)
-     desc    : 1–2 sentences, results first
+     desc    : {en, fr} 1–2 sentences, results first
      stack   : short tech list (shown in mono)
      demo    : live demo URL  (or null to hide the link)
      code    : GitHub URL     (or null to hide the link)
@@ -414,62 +422,166 @@ const FILTERS = ["All","Reinforcement Learning","LLM / RAG","Deep Learning","Dat
 
 const PROJECTS = [
   {
-    title:"TestingFactory V2 — AI Test Automation",
+    title:{en:"TestingFactory V2 — AI Test Automation",
+           fr:"TestingFactory V2 — Automatisation des tests par IA"},
     tags:["Reinforcement Learning","Web / MLOps"],
-    desc:"Autonomous RL agent (PPO) + Selenium engine testing a core banking system. Regression cycles cut from weeks to under 4 hours; discovered unknown, out-of-catalog defects.",
+    desc:{en:"Autonomous RL agent (PPO) + Selenium engine testing a core banking system. Regression cycles cut from weeks to under 4 hours; discovered unknown, out-of-catalog defects.",
+          fr:"Agent RL autonome (PPO) + moteur Selenium testant un core banking system. Cycles de régression réduits de plusieurs semaines à moins de 4 heures ; découverte de défauts inconnus hors catalogue."},
     stack:"Python · Django · Stable-Baselines3 · Selenium · Docker",
     demo:null,
     code:null
   },
   {
-    title:"Secure RAG Legal Agent (Arabic)",
+    title:{en:"Secure RAG Legal Agent (Arabic)",
+           fr:"Agent juridique RAG sécurisé (arabe)"},
     tags:["LLM / RAG"],
-    desc:"Conversational agent analyzing Arabic legal documents with OCR and anonymization. FAISS vector indexing improved data access efficiency by 30%.",
+    desc:{en:"Conversational agent analyzing Arabic legal documents with OCR and anonymization. FAISS vector indexing improved data access efficiency by 30%.",
+          fr:"Agent conversationnel analysant des documents juridiques en arabe avec OCR et anonymisation. L'indexation vectorielle FAISS a amélioré l'efficacité d'accès aux données de 30 %."},
     stack:"LangChain · Ollama · FAISS · Python · Streamlit",
     demo:null,
     code:null
   },
   {
-    title:"Environmental Sound Classifier (ESC-50)",
+    title:{en:"Environmental Sound Classifier (ESC-50)",
+           fr:"Classificateur de sons environnementaux (ESC-50)"},
     tags:["Deep Learning"],
-    desc:"MobileNetV2 trained via transfer learning on Mel spectrograms — 87.5% accuracy, deployed live on Hugging Face Spaces.",
+    desc:{en:"MobileNetV2 trained via transfer learning on Mel spectrograms — 87.5% accuracy, deployed live on Hugging Face Spaces.",
+          fr:"MobileNetV2 entraîné par transfer learning sur des spectrogrammes de Mel — 87,5 % de précision, déployé en ligne sur Hugging Face Spaces."},
     stack:"MobileNetV2 · Librosa · Gradio · Git LFS",
     demo:"https://huggingface.co/spaces/Nebrass1/sound-classifier-nebrass",
     code:"https://github.com/Nebrass1/sound-classifier-project"
   },
   {
-    title:"Automatic Image Captioning",
+    title:{en:"Automatic Image Captioning",
+           fr:"Génération automatique de légendes d'images"},
     tags:["Deep Learning"],
-    desc:"Encoder-decoder (ResNet50 + LSTM) on Flickr30k with Beam Search-optimized caption generation, deployed with a Gradio interface.",
+    desc:{en:"Encoder-decoder (ResNet50 + LSTM) on Flickr30k with Beam Search-optimized caption generation, deployed with a Gradio interface.",
+          fr:"Encodeur-décodeur (ResNet50 + LSTM) sur Flickr30k avec génération de légendes optimisée par Beam Search, déployé avec une interface Gradio."},
     stack:"Keras · ResNet50 · LSTM · Beam Search · Gradio",
     demo:"https://huggingface.co/spaces/Nebrass1/Image-Captioning-Demo",
     code:"https://github.com/Nebrass1/image_captioning_project"
   },
   {
-    title:"Movie Recommendation System",
+    title:{en:"Movie Recommendation System",
+           fr:"Système de recommandation de films"},
     tags:["Web / MLOps"],
-    desc:"Collaborative filtering (KNN) on MovieLens served through a Django REST API with joblib serialization and a TMDb-powered interactive UI.",
+    desc:{en:"Collaborative filtering (KNN) on MovieLens served through a Django REST API with joblib serialization and a TMDb-powered interactive UI.",
+          fr:"Filtrage collaboratif (KNN) sur MovieLens servi via une API REST Django avec sérialisation joblib et une interface interactive alimentée par TMDb."},
     stack:"Django · Scikit-learn · joblib · Bootstrap 5 · TMDb API",
     demo:null,
     code:"https://github.com/Nebrass1/Systeme-de-Recommandation-de-Films"
   },
   {
-    title:"Banking Monitoring Dashboard — BIAT",
+    title:{en:"Banking Monitoring Dashboard — BIAT",
+           fr:"Tableau de bord de supervision bancaire — BIAT"},
     tags:["Data & BI"],
-    desc:"Data Warehouse + Talend ETL pipeline tracking monetary flows; Power BI KPIs deployed to production with Scrum.",
+    desc:{en:"Data Warehouse + Talend ETL pipeline tracking monetary flows; Power BI KPIs deployed to production with Scrum.",
+          fr:"Data Warehouse + pipeline ETL Talend pour le suivi des flux monétaires ; KPIs Power BI déployés en production avec Scrum."},
     stack:"Power BI · Talend · PostgreSQL · SQL",
     demo:null,
     code:null
   },
   {
-    title:"Stock Movement Tracking — Poulina",
+    title:{en:"Stock Movement Tracking — Poulina",
+           fr:"Suivi des mouvements de stock — Poulina"},
     tags:["Data & BI"],
-    desc:"Inventory movement tracking system that improved logistics decision-making by 15%.",
+    desc:{en:"Inventory movement tracking system that improved logistics decision-making by 15%.",
+          fr:"Système de suivi des mouvements de stock ayant amélioré la prise de décision logistique de 15 %."},
     stack:"Power BI · Talend · PostgreSQL",
     demo:null,
     code:null
   }
 ];
+
+/* =====================================================================
+   i18n — EN ↔ FR language toggle
+   English is captured automatically from the HTML (single source of
+   truth). Only the French strings live here. The choice is remembered.
+   ===================================================================== */
+let lang = localStorage.getItem('lang') === 'fr' ? 'fr' : 'en';
+
+const FR = {
+  "meta.title":"Nebrass Chamakh — Ingénieur IA",
+  "meta.desc":"Portfolio de Nebrass Chamakh, Ingénieur IA. Apprentissage par renforcement, LLMs & RAG, Machine Learning et Business Intelligence — des projets déployés en production.",
+  "nav.projects":"Projets",
+  "nav.experience":"Expérience",
+  "nav.skills":"Compétences",
+  "hero.eyebrow":"Ingénieur IA · Tunis, Tunisie",
+  "hero.title":"Je conçois des systèmes d'IA qui <span class=\"accent\">explorent, apprennent</span> — et passent en production.",
+  "hero.lede":"Diplômé en génie informatique (2026). Pour mon projet de fin d'études, j'ai conçu une plateforme de test autonome pilotée par apprentissage par renforcement pour un core banking system — déployée en production avec Docker. J'aime les logiciels intelligents, mesurables, gouvernés et réels.",
+  "hero.cta.work":"Voir mes projets",
+  "hero.cta.email":"M'écrire",
+  "hero.stat1":"cycle de régression (vs semaines)",
+  "hero.stat2":"scénarios automatisés",
+  "hero.stat3":"stages → production",
+  "feat.eyebrow":"À la une · Projet de fin d'études (PFE)",
+  "feat.h2":"TestingFactory V2 — Automatisation des tests pilotée par l'IA",
+  "feat.dates":"Accompany Consulting · Janv. – Juin 2026",
+  "feat.h3":"Un agent autonome qui teste un core banking system",
+  "feat.p":"Plateforme de bout en bout unifiant l'automatisation déterministe Selenium et l'exploration autonome par apprentissage par renforcement — transformant un processus de test manuel de plusieurs semaines en un pipeline gouverné et auto-améliorant.",
+  "feat.li1":"Agent PPO (Stable-Baselines3, Gymnasium) naviguant dans une interface d'entreprise complexe sans aucun script préalable — observations de page à 128 dimensions, récompense optimisée pour la découverte de défauts.",
+  "feat.li2":"<b>SafetyGuard</b> multicouche bloquant les actions dangereuses en temps réel, avec une piste d'audit complète pour un environnement bancaire réglementé.",
+  "feat.li3":"Boucle d'auto-amélioration : suivi du meilleur modèle, planification d'entropie, mémoire de correction d'actions, tableaux de bord analytiques pour la promotion des modèles.",
+  "feat.li4":"Portail de gouvernance Django avec RBAC ; déploiement conteneurisé avec Docker, Nginx &amp; Gunicorn.",
+  "feat.li5":"<b>Impact :</b> découverte autonome de défauts inconnus hors catalogue + génération automatique de scénarios de test réutilisables.",
+  "feat.m1":"régression complète, contre des semaines",
+  "feat.m2":"scénarios fonctionnels",
+  "feat.m3":"modules métier couverts",
+  "feat.m4":"vecteur d'observation / page",
+  "feat.m5":"actions auditées (SafetyGuard)",
+  "feat.m6":"s'améliore à chaque exécution",
+  "work.eyebrow":"Travaux sélectionnés",
+  "work.h2":"Projets",
+  "exp.eyebrow":"Parcours",
+  "exp.h2":"Expérience",
+  "exp.t1.when":"Janv. 2026 – Juin 2026",
+  "exp.t1.h3":"Ingénieur IA — Stage de fin d'études",
+  "exp.t1.p":"Conception et déploiement de TestingFactory V2, une plateforme de test autonome pilotée par RL pour un core banking system à grande échelle (voir le projet à la une ci-dessus).",
+  "exp.t2.when":"Juil. 2025 – Sept. 2025",
+  "exp.t2.h3":"Stagiaire en ingénierie IA",
+  "exp.t2.p":"Développement d'un agent conversationnel RAG sécurisé pour des documents juridiques en arabe — OCR, anonymisation, indexation vectorielle FAISS avec LangChain &amp; Ollama. Efficacité d'accès aux données améliorée de 30 %.",
+  "exp.t3.when":"Juin 2024 – Juil. 2024",
+  "exp.t3.h3":"Stagiaire en Business Intelligence",
+  "exp.t3.p":"Système de suivi des mouvements de stock (Power BI, Talend, PostgreSQL) améliorant la prise de décision logistique de 15 %.",
+  "exp.t4.when":"Févr. 2023 – Juin 2023",
+  "exp.t4.h3":"Stagiaire en Business Intelligence — Mémoire de licence",
+  "exp.t4.p":"Data Warehouse (PostgreSQL) + pipeline ETL (Talend) pour le suivi des flux monétaires ; KPIs Power BI déployés en production avec Scrum.",
+  "exp.t5.when":"Sept. 2022 – Aujourd'hui",
+  "exp.t5.h3":"Consultant freelance — BI &amp; Formation",
+  "exp.t5.org":"Indépendant",
+  "exp.t5.p":"Tableaux de bord Power BI, modélisation de Data Warehouse, pipelines ETL (Talend), nettoyage de données Python — ainsi que des formations en design graphique (Photoshop, Illustrator).",
+  "sk.eyebrow":"Boîte à outils",
+  "sk.h2":"Compétences",
+  "sk.g1":"IA / Machine Learning",
+  "sk.g3":"MLOps &amp; Déploiement",
+  "sk.g6":"Méthodes de travail",
+  "chip.rl":"Apprentissage par renforcement (PPO)",
+  "chip.prompt":"Conception de prompts",
+  "chip.comm":"Communication technique",
+  "lead.eyebrow":"Au-delà du code",
+  "lead.c1.eyebrow":"ISIMa · Conseil scientifique",
+  "lead.c1.h3":"Représentant des étudiants",
+  "lead.c1.p":"Interlocuteur entre l'administration et plus de 1 100 étudiants — représentation, remontée des problèmes et suivi.",
+  "lead.c2.eyebrow":"ISIMa · Club DevOps",
+  "lead.c2.h3":"Président du club",
+  "lead.c2.p":"Direction d'une équipe de 100 membres et organisation de plus de 10 événements techniques autour de la culture et des outils DevOps.",
+  "foot.eyebrow":"Ouvert aux postes d'Ingénieur IA / ML",
+  "foot.h2":"Construisons quelque chose d'intelligent.",
+  "foot.p":"Basé à Tunis · disponible immédiatement · ouvert au remote &amp; à l'international.",
+  "foot.small":"© 2026 Nebrass Chamakh — conçu &amp; développé par moi · // status: seeking_first_role = true"
+};
+
+// Capture the English originals straight from the page — no duplication.
+const EN = {};
+document.querySelectorAll('[data-i18n]').forEach(el=>{ EN[el.dataset.i18n] = el.innerHTML; });
+EN["meta.title"] = document.title;
+const metaDesc = document.querySelector('meta[name="description"]');
+EN["meta.desc"] = metaDesc.getAttribute('content');
+
+const TAG_FR = {"All":"Tous","Reinforcement Learning":"Apprentissage par renforcement"};
+const UI_FR  = {"Live demo":"Démo en ligne","Code":"Code"};
+const tagLabel = t => lang==='fr' ? (TAG_FR[t]||t) : t;
+const uiLabel  = t => lang==='fr' ? (UI_FR[t]||t)  : t;
 
 /* ---------- render projects + filters ---------- */
 const grid = document.getElementById('projects-grid');
@@ -482,29 +594,55 @@ function render(){
   grid.innerHTML = "";
   PROJECTS.filter(p => active==="All" || p.tags.includes(active)).forEach(p=>{
     const links = [
-      p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener">Live demo</a>` : "",
-      p.code ? `<a href="${p.code}" target="_blank" rel="noopener">Code</a>` : ""
+      p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener">${uiLabel("Live demo")}</a>` : "",
+      p.code ? `<a href="${p.code}" target="_blank" rel="noopener">${uiLabel("Code")}</a>` : ""
     ].filter(Boolean).join("");
     const card = document.createElement('article');
     card.className = "card reveal in";
     card.innerHTML = `
-      <div class="tags">${p.tags.map(t=>`<span class="chip">${esc(t)}</span>`).join("")}</div>
-      <h3>${esc(p.title)}</h3>
-      <p>${esc(p.desc)}</p>
+      <div class="tags">${p.tags.map(t=>`<span class="chip">${esc(tagLabel(t))}</span>`).join("")}</div>
+      <h3>${esc(p.title[lang])}</h3>
+      <p>${esc(p.desc[lang])}</p>
       <span class="stack">${esc(p.stack)}</span>
       ${links ? `<div class="links">${links}</div>` : ""}`;
     grid.appendChild(card);
   });
 }
 
-FILTERS.forEach(f=>{
-  const b = document.createElement('button');
-  b.className = "tagbtn" + (f===active ? " active" : "");
-  b.textContent = f;
-  b.onclick = ()=>{ active=f; document.querySelectorAll('.tagbtn').forEach(x=>x.classList.toggle('active',x.textContent===f)); render(); };
-  tagbar.appendChild(b);
+function buildTagbar(){
+  tagbar.innerHTML = "";
+  FILTERS.forEach(f=>{
+    const b = document.createElement('button');
+    b.className = "tagbtn" + (f===active ? " active" : "");
+    b.textContent = tagLabel(f);
+    b.onclick = ()=>{ active=f; buildTagbar(); render(); };
+    tagbar.appendChild(b);
+  });
+}
+
+/* ---------- apply language & toggle ---------- */
+const langBtn = document.getElementById('lang-toggle');
+
+function applyLang(){
+  const dict = lang==='fr' ? FR : EN;
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const v = dict[el.dataset.i18n];
+    if(v !== undefined) el.innerHTML = v;
+  });
+  document.title = dict["meta.title"];
+  metaDesc.setAttribute('content', dict["meta.desc"]);
+  langBtn.textContent = lang==='en' ? 'FR' : 'EN';
+  buildTagbar(); render();
+}
+
+langBtn.addEventListener('click', ()=>{
+  lang = lang==='en' ? 'fr' : 'en';
+  localStorage.setItem('lang', lang);
+  applyLang();
 });
-render();
+
+applyLang();
 
 /* ---------- scroll reveal ---------- */
 const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.12});
